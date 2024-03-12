@@ -1,52 +1,43 @@
+package javaapplication12;
 
-package daireninalani;
+import java.util.Random;
+import java.util.Scanner;
 
-//klavyeden girilen sayiyi ters ceviren pr/
-//basamaklarina ayirarak her defasinda kalani ekrana yaziyor
-//string olarak alarak
-//int olarak alip stringe donusturerek
+//TAS KAGIT MAKAS OYUNU
 public class NewClass {
 
     public static void main(String[] args) {
+        int pc, kisi;
+        Random r = new Random();
+        pc = r.nextInt(3) + 1;
+        //System.out.println("pc= "+pc);
+        System.out.println("1 tas");
+        System.out.println("2 kagit");
+        System.out.println("3 makas");
+        System.out.println("lutfen seciminizi belirtiniz");
 
-        //BURDA sayinin modunu alarak basamaklara ayiriyor her seferinde ekrana basiyoruz ornegin 365%10=5 birler basamagi
-        //ardindan sayiyi 10 boluyoruz int dedik ki sadece tam kismini alsin boldugu zaman orengin 365/10=36
-        //double tanimlasaydik 36.5 gelirdi/ sonra tekrar 36 nin modunu aliyor 0 olana kadar
-        int sayi = 23;
-        int kalan;
-        if (sayi < 0) {
-            sayi = -sayi;
-            System.out.print("-");
-        } else if (sayi == 0) {
-            System.out.println("0");
+        Scanner oku = new Scanner(System.in);
+        kisi = oku.nextInt();
+        if (kisi != 1 && kisi != 2 && kisi != 3) {
+            System.out.println("yanlis bir secim yaptiniz");
+        } else {
+            if (pc == kisi) {
+                System.out.println("berabere");
+            } else if (pc == 1 && kisi == 2) {
+                System.out.println("kisi kazandi");
+            } else if (pc == 1 && kisi == 3) {
+                System.out.println("pc kazandi");
+            } else if (pc == 2 && kisi == 1) {
+                System.out.println("pc kazandi");
+            } else if (pc == 2 && kisi == 3) {
+                System.out.println("kisi kazandi");
+            } else if (pc == 3 && kisi == 1) {
+                System.out.println("kisi kazandi");
+            } else if (pc == 3 && kisi == 2) {
+                System.out.println("pc kazandi");
+            }
         }
 
-        while (sayi > 0) {
-            kalan = sayi % 10;
-            System.out.print(kalan + "");
-            sayi = sayi / 10;
-        }
-
-        System.out.println("");
-
-        //BURDA DA STRING OLARAK ALDIK VE STRING OLARAK YAZDIRDIK EKRANA
-        String sayi1 = "365";
-        String sonuc = "";
-        for (int i = 0; i < sayi1.length(); i++) {
-            sonuc = sayi1.charAt(i) + sonuc;
-        }
-        System.out.println(sonuc);
-
-        System.out.println("");
-
-        ///////////
-        int sayi2 = 786;
-        String s = Integer.toString(sayi2);//sayimizi integer olarak aldik Integer.toString methoduyla stringe donusturduk
-        String stop = "";                    //string turunde boş bir stop değişkeni actik 
-        for (int i = s.length() - 1; i >= 0; i--) { //strınge dönüştürdüğümüz sayının karakterlerini tersten alıp stop a ekleyeceğiz
-            stop += s.charAt(i);
-        }
-        int yeni_say = Integer.parseInt(stop);//burda stopta biriken 563 stringini tekrar integera dönüştürdük ve ekran ayazdık
-        System.out.println(yeni_say);
     }
+
 }
