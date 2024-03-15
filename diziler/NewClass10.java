@@ -1,6 +1,6 @@
 package javaapplication18;
 
-//verilen dizinin satirlarini toplayip bir diziye sutunlarini toplayip bir diziye atayan
+//verilen tam sayi dizisinin satirlarini toplayip bir diziye sutunlarini toplayip bir diziye atayan pr.
 public class NewClass10 {
 
     public static void main(String[] args) {
