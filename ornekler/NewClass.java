@@ -1,43 +1,30 @@
-package javaapplication12;
+package algo1;
 
-import java.util.Random;
 import java.util.Scanner;
 
-//TAS KAGIT MAKAS OYUNU
+//2 sayinin toplami bolumu carpimi cikartma
 public class NewClass {
 
     public static void main(String[] args) {
-        int pc, kisi;
-        Random r = new Random();
-        pc = r.nextInt(3) + 1;
-        //System.out.println("pc= "+pc);
-        System.out.println("1 tas");
-        System.out.println("2 kagit");
-        System.out.println("3 makas");
-        System.out.println("lutfen seciminizi belirtiniz");
 
-        Scanner oku = new Scanner(System.in);
-        kisi = oku.nextInt();
-        if (kisi != 1 && kisi != 2 && kisi != 3) {
-            System.out.println("yanlis bir secim yaptiniz");
+        Scanner k = new Scanner(System.in);
+        System.out.println("bir sayi giriniz");
+        double sayi1 = k.nextDouble();
+        System.out.println("bir sayi daha giriniz");
+        double sayi2 = k.nextDouble();
+
+        System.out.println("birinci sayi= " + sayi1);
+        System.out.println("ikinci sayi= " + sayi2);
+        System.out.println("toplamlari= " + (sayi1 + sayi2));
+        System.out.println("farklari= " + (sayi1 - sayi2));
+        System.out.println("carpimlari= " + (sayi1 * sayi2));
+        if (sayi2 == 0 && sayi1 == 0) {
+            System.out.println("bolum= belirsiz ");
+        } else if (sayi2 == 0) {
+            System.out.println("bolum= tanimsiz ");
         } else {
-            if (pc == kisi) {
-                System.out.println("berabere");
-            } else if (pc == 1 && kisi == 2) {
-                System.out.println("kisi kazandi");
-            } else if (pc == 1 && kisi == 3) {
-                System.out.println("pc kazandi");
-            } else if (pc == 2 && kisi == 1) {
-                System.out.println("pc kazandi");
-            } else if (pc == 2 && kisi == 3) {
-                System.out.println("kisi kazandi");
-            } else if (pc == 3 && kisi == 1) {
-                System.out.println("kisi kazandi");
-            } else if (pc == 3 && kisi == 2) {
-                System.out.println("pc kazandi");
-            }
+            System.out.println("bolum= " + (sayi1 / sayi2));
+
         }
-
     }
-
 }

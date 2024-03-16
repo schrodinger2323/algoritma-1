@@ -1,24 +1,24 @@
+package algo1;
 
 import java.util.Scanner;
 
-//klavyeden girilen sayilardan pozitif olanlarin ortalamasini hesaplayan program
+//girilen iki sayidan buyugunu ekrana yazdiran
 public class NewClass1 {
-    public static void main(String[] args) {
-        Scanner k=new Scanner(System.in);
-        int sayac=0 ,toplam=0;
-        double ortalama=0;
-        for(int i=0; i<10; i++){
-            int x=k.nextInt();
-            if(x>0){
-                toplam= toplam+x;
-                sayac++;
-            }
-        }
-        if(sayac==0){
-            System.out.println("ortalama hesaplanamadi lutfen baska sayilar giriniz");
-        }
-        ortalama=toplam/sayac;
-        System.out.println("ortalama="+ortalama);
-    }
-}
 
+    public static void main(String[] args) {
+        Scanner k = new Scanner(System.in);
+        System.out.println("bir sayi giriniz");
+        double sayi1 = k.nextDouble();
+        System.out.println("bir sayi daha giriniz");
+        double sayi2 = k.nextDouble();
+        //double enb;
+        if (sayi1 > sayi2) {
+            System.out.println("buyuk olan sayi= " + sayi1);
+        } else if (sayi1 < sayi2) {
+            System.out.println("buyuk olan sayi= " + sayi2);
+        } else {
+            System.out.println("iki sayi birbirine esittir");
+        }
+    }
+
+}
