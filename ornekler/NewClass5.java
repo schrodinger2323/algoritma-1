@@ -1,22 +1,24 @@
-package javaapplication18;
+package algo1;
 
 import java.util.Scanner;
 
-//klavyeden girilen iki sayinin ebobunu bulan pr.
 public class NewClass5 {
 
     public static void main(String[] args) {
+        //klavyeden girilen sayilari topla 0 girince toplamı ekrana yazdır, programdan cik
+        //for dongusu ile
         Scanner k = new Scanner(System.in);
-        int sayi1 = k.nextInt();
-        int sayi2 = k.nextInt();
-        int ebob = 1;
-        int m = 2;
-        while (sayi1 >= m && sayi2 >= m) {
-            if (sayi1 % m == 0 && sayi2 % m == 0) {
-                ebob = m;
+        System.out.println("sayi giriniz");
+        int toplam = 0;
+        for (;;) {
+            int x = k.nextInt();
+            if (x == 0) {
+                System.out.println("0 girdiniz programdan ciktiniz");
+                System.out.println("toplam= " + toplam);
+                System.exit(1);
+
             }
-            m++;
+            toplam = toplam + x;
         }
-        System.out.println("ebob= " + ebob);
     }
 }
