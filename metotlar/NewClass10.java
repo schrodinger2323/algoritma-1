@@ -1,22 +1,23 @@
-package hafta8;
+package ornek1;
 
-//kendisine parametre olarak geln tam sayi dizisindeki tek elemanlarin ortalamasini geri donduren metod
 public class NewClass10 {
 
-    public static double ortalama(int[] a) {
-        double toplam = 0, sayac = 0;
-        for (int i = 0; i < a.length; i++) {
-            if (a[i] % 2 == 1) {
-                toplam += a[i];
-                sayac++;
-            }
-        }
-        return toplam / sayac;
+    public static void main(String[] args) {
+        //2 boyutlu string dizisinde her hücredeki string icinde rakam olmayan karakterlerı 
+        //ekrana yazan method
+        String s[][] = {{"ab2?0", "bdc56"}, {"5jk", "sd69"}};
+        harfyaz(s);
     }
 
-    public static void main(String[] args) {
-
-        int dizi[] = {1, 2, 3, 4};
-        System.out.println(ortalama(dizi));
+    public static void harfyaz(String a[][]) {
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a[i].length; j++) {
+                for (int k = 0; k < a[i][j].length(); k++) {
+                    if (a[i][j].charAt(k) < 48 || a[i][j].charAt(k) > 57) {
+                        System.out.println(a[i][j].charAt(k));
+                    }
+                }
+            }
+        }
     }
 }

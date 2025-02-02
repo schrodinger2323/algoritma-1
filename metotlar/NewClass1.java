@@ -1,16 +1,27 @@
-package hafta8;
+package ornek1;
 
-//kendisine paramtere olarak gelen sayi kadar adinizi ekrana yazan metod
 public class NewClass1 {
 
-    public static void adyaz(int a) {
-        for (int i = 0; i < a; i++) {
-            System.out.println("hacer2323");
-        }
+    public static void main(String[] args) {
+        //kendisine parametre olarak gelen stringin polindrom olup olmadigini
+        //geri donduren method
+        String s = "kazak";
+        System.out.println(pkontrol(s));
     }
 
-    public static void main(String[] args) {
-
-        adyaz(6);
+    public static boolean pkontrol(String str) {
+        int low = 0;
+        int high = str.length() - 1;
+        boolean kontrol = true;
+        while (low < high) {
+            if (str.charAt(low) != str.charAt(high)) {
+                kontrol = false;
+                break;
+            } else {
+                low++;
+                high--;
+            }
+        }
+        return kontrol;
     }
 }
