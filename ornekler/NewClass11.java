@@ -1,23 +1,17 @@
-package algo1;
+package ornek1;
 
-import java.util.Scanner;
-
-//klavyeden girilen stringteki b ve Blerin indislerini gosteren
 public class NewClass11 {
-
     public static void main(String[] args) {
-        Scanner k = new Scanner(System.in);
-        System.out.println("bir string giriniz");
-        String s = k.nextLine();
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == 'b') {
-                System.out.println("b " + i + ". indistedir");
-            } else if (s.charAt(i) == 'B') {
-                System.out.println("B " + i + ".indistedir");
+        //10 elemanli tam sayi dizisindeki enb tek sayiyi bulan
+        int x[]={15,1,2,3,4,5,6,7,8,9,10,13};
+        int enbt=x[0];
+        for (int i = 0; i < x.length; i++) {
+            if(x[i]%2==1){
+                if(x[i]>enbt){
+                    enbt=x[i];
+                }
             }
-
         }
-
+        System.out.println(enbt);
     }
-
 }
